@@ -1,0 +1,277 @@
+@font-face {
+    font-family: 'milkshake';
+    src: url('milkshake-webfont.woff2') format('woff2'),
+         url('milkshake-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+html{
+	font-size: 62.5%;
+}
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'B612', sans-serif;
+	font-size: 1.6rem;
+	line-height: 1.5;
+}
+/*colour scheme:
+brick red: #c6552c
+mango: #daa03d
+black grey: #171816
+tan/white: #f5e7cb*/
+
+/*-------------toggle nav----------------*/
+header{
+	background-color: #171816;
+	padding: 2rem;
+}
+header h1{
+	font-family: milkshake;
+	font-size: 3.2rem;
+}
+a{
+	color: #f5e7cb;
+	text-decoration: none;
+}
+.flex-container{
+	display: flex;
+	justify-content: space-between;
+}
+.menu a,
+.user-buttons a {
+	text-transform: uppercase;
+	font-size: 1.8rem;
+	line-height: 3;
+}
+.menu a:hover,
+.menu a:active{
+	color: #c6552c;
+}
+.user-buttons a:hover,
+.user-buttons a:active,
+.article-buttons:hover,
+.article-buttons:active{
+	background-color: #daa03d;
+	color: #171816;
+}
+.menu li,
+.user-buttons{
+	display: flex;
+}
+.menu svg{
+	width: 3rem;
+	height: 3rem;
+	margin-right: 1rem;
+	align-self: center;
+}
+.user-buttons{
+	border-top: 1px solid #f5e7cb;
+	padding: 2rem 0;
+}
+.user-buttons a{
+	border:1px solid #f5e7cb;
+	padding: 1.35rem;
+	margin-right: 2rem;
+}
+.toggle-btn{
+	border: none;
+	outline: none;
+	background-color: #171816;
+	fill: #f5e7cb;
+}
+.toggle-btn:hover,
+.toggle-btn:active{
+	cursor: pointer;
+}
+header nav{
+	position: absolute;
+	top: 9rem;
+	left: 0;
+	background-color: #171816;
+	padding: 0 2rem;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.7s ease-in-out;
+    z-index: 100;
+}
+ul.menu{
+    padding-bottom: 1rem;
+}
+.show-nav {
+    max-height: 30rem;
+}
+/*--------------------BODY------------------*/
+h2{
+	font-family: milkshake;
+	font-size: 4.8rem;
+}
+h3{
+	font-family: Arial;
+	font-weight: bolder;
+	text-transform: uppercase;
+	font-size: 1.6rem;
+	color: #c6552c;
+}
+h4{
+	font-family: milkshake;
+	font-size: 3rem;
+}
+main{
+	background-color: #171816;
+	color: #f5e7cb;
+}
+.banner{
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url(../img/typewriter-400.webp);
+	background-repeat: no-repeat;
+	height: 48.6rem;
+	background-size: cover;
+	background-position: left top;
+	color: #171816;
+	position: relative;
+}
+.banner div{
+	background-color: #daa03d;
+	text-align: center;
+	padding:5rem 2rem;
+	margin-right: 2rem;
+	position: absolute;
+	bottom:0;
+	left: 2rem;
+}
+.banner hr{
+	border:0.3rem solid #c6552c;
+	width: 5%;
+}
+.old-articles{
+	padding:8rem 2rem;
+}
+.old-articles p{
+	margin-top: 4rem;
+}
+.article-buttons{
+	border-top:0.1rem solid #f5e7cb;
+	border-bottom:0.1rem solid #f5e7cb;
+	padding: 1rem;
+	text-transform: uppercase;
+}
+
+.quick-references{
+	background-color: #daa03d;
+	color: #171816;
+	padding-bottom: 8rem;
+}
+.quick-references > div:first-child{
+	background-color: #171816;
+	margin: 0 2rem;
+	padding: 2rem;
+	color: #f5e7cb;
+	position: relative;
+	top: 5rem;
+}
+
+.quick-references ul{
+	list-style-type: disc;
+	margin: 2rem 2rem 4rem 5rem;
+}
+.image-container{
+	background-image: url(../img/girl-400.webp);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: right center;
+	height: 37.9rem;
+}
+.quick-references .article-buttons{
+	margin:0 2rem;
+	border-color: #c6552c;
+	color: #171816;
+}
+.quick-references .article-buttons:hover,
+.quick-references .article-buttons:active{
+	background-color: #171816;
+	color: #f5e7cb;
+}
+
+/*--------------Footer------------------*/
+footer{
+	background-color: #171816;
+	color: #f5e7cb;
+	padding: 5rem 2rem;
+	text-align: right;
+}
+footer div p{
+	font-size: 7rem;
+	font-family: "Arial Black", Arial;
+	font-weight: 900;
+	color: #000;
+}
+
+@media only screen and (min-width: 1300px){
+	.toggle-btn{
+		display: none;
+	}
+	header,
+	header nav,
+	ul.menu,
+	.user-buttons{
+		display: flex;
+		justify-content: space-around;
+	}
+
+	ul.menu li {
+        flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: auto;
+        margin-left: 5rem;
+    }
+ 	header nav {
+        max-height: 50rem;
+        position: static;
+        max-width: 80%;
+        overflow: visible;
+    }
+    .user-buttons{
+    	border: 0;
+    	padding: 0;
+    }
+
+ 	.banner{
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url(../img/typewriter-1300.webp);
+	}
+	.banner div{
+	bottom:-10%;
+	left: 10%;
+	width: 50rem;
+	}
+
+	.old-articles div{
+		width: 45%;
+		position: relative;
+		left: 55%;
+	}
+	.container{
+		width: 1200px;
+		margin: 0 auto;
+	}
+	div.image-container{
+		background-image: url(../img/girl-566.webp);
+		width: 50%;
+		margin: 0 2rem;
+	}
+	.quick-references > div:first-child{
+		width: 55rem;
+		left: 7%;
+	}
+	.quick-references .bullet-points{
+		width: 45%;
+	}
+	.quick-references > div:last-child{
+		display: flex;
+		justify-content: space-between;
+	}
+	footer div p{
+		text-transform: uppercase;
+		font-size: 15rem;
+	}
+
+}
